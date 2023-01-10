@@ -9,6 +9,7 @@
 
 html {
   font-family: "Montserrat";
+  font-size: 14px;
   background-color: hsl(30, 38%, 92%);
 }
 
@@ -34,13 +35,13 @@ main {
 }
 
 .full-size {
-  flex-grow: 1;
-  flex-basis: 50%;
   width: 100%;
   height: 100%;
 }
 
 .main .image-bg {
+  flex-grow: 1;
+  flex-basis: 50%;
   background: url(images/image-product-desktop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,7 +50,9 @@ main {
 }
 
 .main .content {
-  padding: 30px;
+  flex-grow: 1;
+  flex-basis: 50%;
+  padding: 30px 45px;
   background-color: hsl(0, 0%, 100%);
   display: flex;
   justify-content: space-around;
@@ -57,7 +60,7 @@ main {
   flex-direction: column;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  gap: 10px;
+  gap: 5px;
 }
 .content span {
   text-transform: uppercase;
@@ -72,11 +75,15 @@ main {
   font-weight: 800;
 }
 
+.content p {
+  line-height: 25px;
+}
+
 .price {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .price .big-price {
@@ -106,6 +113,43 @@ main {
 .btn a {
   text-decoration: none;
   color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .main .image-bg {
+    flex-grow: 1;
+    flex-basis: 50%;
+    background: url(images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  .main .content {
+    flex-grow: 1;
+    flex-basis: 50%;
+    padding: 10px 30px 20px 30px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    gap: 5px;
+  }
 }
 
 /* main{
