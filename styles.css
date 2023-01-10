@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.2s all;
 }
 
 html {
@@ -108,11 +109,17 @@ main {
   align-items: center;
   gap: 10px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .btn,
 .btn a {
   text-decoration: none;
   color: hsl(0, 0%, 100%);
+}
+
+.btn:hover {
+  background: ;
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1440px) {
